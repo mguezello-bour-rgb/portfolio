@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "publier": "git add -A && git commit -m \"Mise a jour du portfolio\" && git push"
+    "publier": "git add -A && git commit -m \"Mise a jour du portfolio\" && git push",
+    "zip": "node scripts/build-zip.js"
   },
   "dependencies": {
     "express": "^4.18.2",

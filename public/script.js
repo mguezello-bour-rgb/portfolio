@@ -52,6 +52,8 @@ function ref(category, i) {
 const assetCache = new Map();
 function assetExists(url) {
   if (!url) return Promise.resolve(false);
+  // Version hors-ligne (fichier ouvert par double-clic) : la vérification a déjà été faite à la création du zip
+  if (window.PORTFOLIO_DATA) return Promise.resolve(true);
   if (!assetCache.has(url)) {
     assetCache.set(url, fetch(url, { method: 'HEAD' }).then(r => r.ok).catch(() => false));
   }
@@ -444,10 +446,15 @@ document.getElementById('sheet-date').textContent =
 async function init() {
   let data = {};
   try {
-    // En local : l'API du serveur Node. En ligne (site statique) : le fichier data.json publié à côté.
-    let res = await fetch('/api/data').catch(() => null);
-    if (!res || !res.ok || !(res.headers.get('content-type') || '').includes('json')) res = await fetch('data.json');
-    data = await res.json();
+    if (window.PORTFOLIO_DATA) {
+      // Version statique (en ligne ou zip) : données intégrées dans data.js
+      data = window.PORTFOLIO_DATA;
+    } else {
+      // En local : l'API du serveur Node, sinon le fichier data.json publié à côté
+      let res = await fetch('/api/data').catch(() => null);
+      if (!res || !res.ok || !(res.headers.get('content-type') || '').includes('json')) res = await fetch('data.json');
+      data = await res.json();
+    }
   } catch (err) {
     console.error('Impossible de charger les données du portfolio :', err);
   }
