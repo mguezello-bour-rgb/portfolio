@@ -1,0 +1,557 @@
+{
+  "cv": {
+    "pdf": "pdf/cv/cv-guezello-bour_mat--o-1791351561717.pdf"
+  },
+  "reseaux": [
+    {
+      "titre": "Configuration BGP",
+      "description": "Mise en place et optimisation du protocole de routage BGP",
+      "icone": "🌐",
+      "image": "images/competences/bgp.jpg",
+      "pdf": "pdf/competences/bgp.pdf",
+      "technologies": [
+        "BGP",
+        "Cisco IOS",
+        "Route Maps"
+      ],
+      "details": [
+        "Configuration eBGP / iBGP",
+        "Filtrage prefix-lists et route-maps",
+        "Optimisation des attributs (LOCAL_PREF, MED)",
+        "Tests de convergence et bascule"
+      ],
+      "resultat": "Routage multi-sites stable"
+    },
+    {
+      "titre": "Routage OSPF",
+      "description": "Configuration multi-zones OSPF avec redistribution",
+      "icone": "🔀",
+      "image": "images/competences/ospf.jpg",
+      "pdf": "pdf/competences/ospf.pdf",
+      "technologies": [
+        "OSPF",
+        "Areas",
+        "LSA"
+      ],
+      "details": [
+        "Design multi-areas",
+        "Zones stub / NSSA",
+        "Redistribution entre protocoles",
+        "Tuning des timers"
+      ],
+      "resultat": "Topologie OSPF optimisée"
+    },
+    {
+      "titre": "Segmentation VLAN",
+      "description": "Architecture VLAN avec trunking et routing inter-VLAN",
+      "icone": "📡",
+      "image": "images/competences/vlan.jpg",
+      "pdf": "pdf/competences/vlan.pdf",
+      "technologies": [
+        "VLAN",
+        "802.1Q",
+        "STP"
+      ],
+      "details": [
+        "Segmentation par service",
+        "Trunks 802.1Q",
+        "Inter-VLAN (SVI)",
+        "Optimisation STP"
+      ],
+      "resultat": "Segmentation claire et sécurisée"
+    },
+    {
+      "titre": "VPN IPsec",
+      "description": "Tunnels VPN sécurisés site-à-site",
+      "icone": "🔒",
+      "image": "images/competences/ipsec.jpg",
+      "pdf": "pdf/competences/ipsec.pdf",
+      "technologies": [
+        "IPsec",
+        "IKEv2",
+        "Crypto"
+      ],
+      "details": [
+        "Tunnels IPsec",
+        "IKEv2",
+        "Certificats / PSK",
+        "Supervision des tunnels"
+      ],
+      "resultat": "Communication chiffrée inter-sites"
+    },
+    {
+      "titre": "Quality of Service",
+      "description": "Priorisation du trafic réseau (VoIP / critique)",
+      "icone": "⚡",
+      "image": "images/competences/qos.jpg",
+      "pdf": "pdf/competences/qos.pdf",
+      "technologies": [
+        "QoS",
+        "DSCP",
+        "Queuing"
+      ],
+      "details": [
+        "Classification",
+        "Marquage DSCP",
+        "Files LLQ / CBWFQ",
+        "Shaping / policing"
+      ],
+      "resultat": "Trafic critique priorisé"
+    },
+    {
+      "titre": "Haute Disponibilité",
+      "description": "Architecture redondante et résiliente",
+      "icone": "🔄",
+      "image": "images/competences/ha.jpg",
+      "pdf": "pdf/competences/ha.pdf",
+      "technologies": [
+        "HSRP",
+        "VRRP",
+        "LACP"
+      ],
+      "details": [
+        "HSRP / VRRP",
+        "Link Aggregation (LACP)",
+        "Bascule et détection de panne",
+        "Tests de résilience"
+      ],
+      "resultat": "Tolérance aux pannes améliorée"
+    }
+  ],
+  "telecoms": [
+    {
+      "titre": "Infrastructure MPLS",
+      "description": "Déploiement MPLS avec VPN Layer 3",
+      "icone": "🛣️",
+      "image": "images/competences/mpls.jpg",
+      "pdf": "pdf/competences/mpls.pdf",
+      "technologies": [
+        "MPLS",
+        "LDP",
+        "VRF"
+      ],
+      "details": [
+        "PE/CE et VRF",
+        "Distribution de labels LDP",
+        "VPN L3 inter-sites",
+        "Tests et validation"
+      ],
+      "resultat": "Isolation et routage MPLS opérationnels"
+    },
+    {
+      "titre": "Téléphonie VoIP/SIP",
+      "description": "Configuration VoIP et téléphonie SIP",
+      "icone": "📞",
+      "image": "images/competences/voip.jpg",
+      "pdf": "pdf/competences/voip.pdf",
+      "technologies": [
+        "SIP",
+        "Asterisk",
+        "VoIP"
+      ],
+      "details": [
+        "Serveur Asterisk",
+        "SIP trunks",
+        "Extensions et IVR",
+        "Qualité d'appel"
+      ],
+      "resultat": "Téléphonie SIP fonctionnelle"
+    },
+    {
+      "titre": "Fibre Optique",
+      "description": "Déploiement et maintenance de réseaux FTTH",
+      "icone": "💡",
+      "image": "images/competences/fibre.jpg",
+      "pdf": "pdf/competences/fibre.pdf",
+      "technologies": [
+        "FTTH",
+        "GPON",
+        "OLT"
+      ],
+      "details": [
+        "Architecture PON",
+        "OLT/ONT",
+        "Réflectométrie (OTDR)",
+        "Raccordement"
+      ],
+      "resultat": "Déploiement FTTH maîtrisé"
+    },
+    {
+      "titre": "Réseaux Mobiles",
+      "description": "Notions d'infrastructure 4G/5G",
+      "icone": "📱",
+      "image": "images/competences/mobile.jpg",
+      "pdf": "pdf/competences/mobile.pdf",
+      "technologies": [
+        "LTE",
+        "5G",
+        "EPC"
+      ],
+      "details": [
+        "Architecture EPC",
+        "Radio / handover",
+        "Notions core network",
+        "Optimisations"
+      ],
+      "resultat": "Compréhension architecture mobile"
+    },
+    {
+      "titre": "Sécurité Télécoms",
+      "description": "Sécurisation des infrastructures télécom",
+      "icone": "🛡️",
+      "image": "images/competences/sec-telecom.jpg",
+      "pdf": "pdf/competences/sec-telecom.pdf",
+      "technologies": [
+        "Firewall",
+        "IDS/IPS",
+        "AAA"
+      ],
+      "details": [
+        "Protection bordure",
+        "AAA",
+        "IDS/IPS",
+        "Audit"
+      ],
+      "resultat": "Principes sécurité appliqués"
+    }
+  ],
+  "dev": [
+    {
+      "titre": "Automatisation Python",
+      "description": "Scripts Python pour automatiser des tâches réseau",
+      "icone": "🐍",
+      "image": "images/competences/python-auto.jpg",
+      "pdf": "pdf/competences/python-auto.pdf",
+      "technologies": [
+        "Python",
+        "Netmiko",
+        "Paramiko"
+      ],
+      "details": [
+        "Backup configs",
+        "Déploiement en masse",
+        "Parsing et reporting",
+        "Logs"
+      ],
+      "resultat": "Automatisation et gain de temps"
+    },
+    {
+      "titre": "Conteneurisation Docker",
+      "description": "Déploiement d'applications dans des conteneurs",
+      "icone": "🐳",
+      "image": "images/competences/docker.jpg",
+      "pdf": "pdf/competences/docker.pdf",
+      "technologies": [
+        "Docker",
+        "Compose"
+      ],
+      "details": [
+        "Dockerfiles",
+        "Compose",
+        "Réseaux Docker",
+        "Volumes"
+      ],
+      "resultat": "Déploiements reproductibles"
+    },
+    {
+      "titre": "Infrastructure as Code",
+      "description": "Automatisation infra avec Ansible / Git",
+      "icone": "📜",
+      "image": "images/competences/iac.jpg",
+      "pdf": "pdf/competences/iac.pdf",
+      "technologies": [
+        "Ansible",
+        "Git"
+      ],
+      "details": [
+        "Playbooks",
+        "Inventaires",
+        "Idempotence",
+        "Versionning"
+      ],
+      "resultat": "Déploiements plus fiables"
+    },
+    {
+      "titre": "Monitoring & Observabilité",
+      "description": "Supervision et alerting",
+      "icone": "📊",
+      "image": "images/competences/monitoring.jpg",
+      "pdf": "pdf/competences/monitoring.pdf",
+      "technologies": [
+        "Zabbix",
+        "Grafana"
+      ],
+      "details": [
+        "Métriques",
+        "Alertes",
+        "Dashboards",
+        "SLA"
+      ],
+      "resultat": "Visibilité et alerting améliorés"
+    },
+    {
+      "titre": "Développement Web",
+      "description": "Interfaces web pour outils réseau",
+      "icone": "🌐",
+      "image": "images/competences/webdev.jpg",
+      "pdf": "pdf/competences/webdev.pdf",
+      "technologies": [
+        "JavaScript",
+        "Flask"
+      ],
+      "details": [
+        "UI simple",
+        "API",
+        "Authentification",
+        "Tableaux de bord"
+      ],
+      "resultat": "Outils web utilisables"
+    },
+    {
+      "titre": "Base de Données",
+      "description": "Stockage de logs et données réseau",
+      "icone": "🗄️",
+      "image": "images/competences/bdd.jpg",
+      "pdf": "pdf/competences/bdd.pdf",
+      "technologies": [
+        "MySQL",
+        "PostgreSQL"
+      ],
+      "details": [
+        "Schémas",
+        "Requêtes",
+        "Index",
+        "Historisation"
+      ],
+      "resultat": "Données structurées et exploitables"
+    }
+  ],
+  "projets": [
+    {
+      "titre": "Mettre en œuvre un système de transmission",
+      "description": "Émetteur / Récepteur : message → bits → signal, puis décodage côté réception",
+      "icone": "",
+      "image": "images/projets/transmission.png",
+      "pdf": "pdf/projets/transmission.pdf",
+      "technologies": [
+        "Matlab toolbox",
+        "ADALM-PLUTO",
+        "QoS",
+        "Zabbix"
+      ],
+      "details": [
+        "Conception sur deux PC : émetteur et récepteur",
+        "Conversion message → bits → modulation / signal",
+        "Démodulation et reconstruction du message",
+        "Redondance et haute disponibilité",
+        "QoS pour la VoIP et supervision"
+      ],
+      "resultat": "acquis a 30% (projet pas finit)"
+    },
+    {
+      "titre": "Etude multédia",
+      "description": "Etude d un système multimédia pour l entreprise MediaStream",
+      "icone": "",
+      "image": "images/projets/mpls-migration.png",
+      "pdf": "pdf/projets/mpls-migration.pdf",
+      "technologies": [
+        "Pfsense",
+        "Borne-wifi-linksys",
+        "cisco2960",
+        "Azuracast"
+      ],
+      "details": [
+        "J'ai appris à paramétrer pfSense pour faire un routage inter-vlan, un portail captif, un DHCP et un DNS",
+        "J'ai su faire un site multimédia avec Azuracast donc un multimedia de Radio",
+        "J'ai appris à configurer une borne-wifi Linksys pour faire un point d'accès",
+        "J'ai su comprendre un sujet d'entreprise pour régler un problème et le résoudre en duo avec un collègue"
+      ],
+      "resultat": "acquis à 60%"
+    },
+    {
+      "titre": "Souder la fibre optique",
+      "description": "Document qui explique par étape comment j ai soudé la fibre optique",
+      "icone": "",
+      "image": "images/projets/python-tools.png",
+      "pdf": "pdf/projets/python-tools.pdf",
+      "technologies": [
+        "Soudeuse",
+        "Cliveuse"
+      ],
+      "details": [
+        "J'ai appris à utiliser la soudeuse pour réaliser une bonne soudure",
+        "J'ai appris à bien couper la fibre optique avec la cliveuse",
+        "J'ai appris à bien nettoyer la fibre pour qu'elle soit propre lors de la soudure"
+      ],
+      "resultat": "acquis a 100%"
+    },
+    {
+      "titre": "Déploiement de couverture WiFi",
+      "description": "Projet pour vérifier la couverture de la diffusion de la wifi",
+      "icone": "",
+      "image": "images/projets/voip-enterprise.png",
+      "pdf": "pdf/projets/voip-enterprise.pdf",
+      "technologies": [
+        "Point d'accès",
+        "Netspot"
+      ],
+      "details": [
+        "J'ai su comprendre comment fonctionne un point d'accès",
+        "J'ai su voir la couverture de diffusion du wifi par les points d'accès via Netspot",
+        "J'ai appris à analyser les valeurs pour identifier les zones de couverture faible et forte au sein de mon département"
+      ],
+      "resultat": "acquis à 80%"
+    },
+    {
+      "titre": "Réception de la TV TNT",
+      "description": "Manipulation des antennes rateaux pour réceptionner la TV TNT ",
+      "icone": "",
+      "image": "images/projets/datacenter.png",
+      "pdf": "pdf/projets/datacenter.pdf",
+      "technologies": [
+        "Antenne râteau",
+        "TV Explorer II",
+        "AVerTV 3D",
+        "ARCOM"
+      ],
+      "details": [
+        "J'ai su installer une antenne",
+        "J'ai su visualiser les émetteurs en regardant sur le site de l'ARCOM",
+        "J'ai su visualiser le signal reçu avec TV Explorer II",
+        "J'ai pu visionner la TV sur l'ordinateur avec l'application Avermedia"
+      ],
+      "resultat": "acquis a 90%"
+    },
+    {
+      "titre": "Caractérisation des câbles Ethernet avec FLUKE",
+      "description": "Test et caractérisation de câbles RJ45 à l'aide des appareils de mesure FLUKE (LinkIQ et DTX-1200) pour évaluer les performances du lien physique",
+      "icone": "",
+      "image": "images/projets/security.png",
+      "pdf": "pdf/projets/security.pdf",
+      "technologies": [
+        "LinkIQ",
+        "DTX-1200",
+        "RJ45"
+      ],
+      "details": [
+        "Découverte et prise en main des équipements FLUKE LinkIQ et DTX-1200 pour la qualification de câbles cuivre RJ45.",
+        "Analyse de la continuité, du débit jusqu'à 10 Gbps, de la longueur et du NVP."
+      ],
+      "resultat": "acquis à 70%"
+    },
+    {
+      "titre": "Projet de Maintenance : Câble Sous-Marin Réunion–Mayotte",
+      "description": "Présenter un projet d installation et de maintenance d un cable sous-marin.",
+      "icone": "",
+      "image": "images/projets/nouveau-projet.png",
+      "pdf": "pdf/projets/nouveau-projet.pdf",
+      "technologies": [
+        "SMART",
+        "CANVA",
+        "Google Doc"
+      ],
+      "details": [
+        "Chef de Projet Infrastructure & Maintenance",
+        "Présentation du projet de l installation du cable Reunion Mayotte avec la technologie Smart.",
+        "Présentation du projet de maintenance."
+      ],
+      "resultat": "acquis à 85%"
+    }
+  ],
+  "perso": [
+    {
+      "titre": "Stage de Boxe Thai",
+      "description": "Je pratique de la boxe Thai et k1 depuis plus de 3 et demie. J'ai eux l'opportunité de faire ce stage en Thaïlande a Krabi avec le club CultureLoisir438  pendant 2semaines.",
+      "technologies": [
+        "Voyage",
+        "rencontre",
+        "sport"
+      ],
+      "details": [],
+      "resultat": "90%",
+      "image": "images/perso/img_0656-jpg-1791436133994.jpg",
+      "pdf": "pdf/perso/k8s.pdf"
+    },
+    {
+      "titre": "Passion pour la course à pied",
+      "description": "Je m entraine souvent à la course a pied dans mon temps libre. Cette année je me suis lancé l'objectif de faire moins de 40min le 10km. De m'améliorer sur tous mes temps sur 10km, 20km,..., 50km",
+      "technologies": [
+        "sport",
+        "entrainement",
+        "trail"
+      ],
+      "details": [],
+      "resultat": "80%",
+      "image": "images/perso/capture-d---cran-2026-10-08-091758-1791436752931.png",
+      "pdf": "pdf/perso/discordbot.pdf"
+    },
+    {
+      "titre": "Passionné de vélo",
+      "description": "Je suis un ancien pratiquant de vélo en club pendant 2ans a l'ACPR dont j'ai pu faire du cross-country et de la descente VTT. Puis dans mon temps libre je fais désormais du cyclisme",
+      "technologies": [
+        "vélo",
+        "sport",
+        "loisir"
+      ],
+      "details": [
+        "parcours:",
+        "Sainte-Marie - Maido - Roche noire : 98.45km 2400d+",
+        "Tour de l'ile de La Réunion : 226km 2100d+",
+        "4 x Sainte-Marie - Saint-Gilles : 100km 432d+",
+        "2 x Sainte-Marie - Salazie (Hell Bourg): 86km 1409d+",
+        "Sainte-Marie -> Saint-Pierre : 100km 492d+",
+        "Saint-Pierre - Cascade Grand Galet : 62.77km 1059d+",
+        "Sainte - Marie - Bras Panon : 69.33km 618d+",
+        "Sainte - Marie - Grand Bruler"
+      ],
+      "resultat": "60%",
+      "image": "images/perso/capture-d---cran-2026-10-08-093445-1791437695253.png",
+      "pdf": "pdf/perso/iot-dashboard.pdf"
+    }
+  ],
+  "experiences": [
+    {
+      "type": "Alternance",
+      "statut": "En cours",
+      "entreprise": "Orange",
+      "poste": "Chargé d'affaire FTTh RIP",
+      "dates": "24/08/2026 - 27/08/2027",
+      "lieu": "Sainte-Marie",
+      "missions": [
+        "— Désaturation, création et extension du réseau FTTH",
+        "— Maintenance du réseau et traitement des incidents",
+        "— Pilotage des sous-traitants et suivi des chantiers"
+      ],
+      "outils": [
+        "ipon",
+        "gestar",
+        "..."
+      ],
+      "image": "images/experiences/capture-d---cran-2026-10-09-192530-1791559544661.png",
+      "pdf": ""
+    },
+    {
+      "type": "Stage",
+      "statut": "Terminé",
+      "entreprise": "Kyntus",
+      "poste": "Technicien Télécom",
+      "dates": "28/04/2026",
+      "lieu": "13/06/2026",
+      "missions": [
+        "-POI FTTH",
+        "-GESTAR",
+        "-SAV FTTH",
+        "-ZLIN FTTH"
+      ],
+      "outils": [
+        "soudeuse",
+        "EPI",
+        "pince coupante",
+        "réflectomètre",
+        "photomètre"
+      ],
+      "image": "images/experiences/capture-d---cran-2026-10-09-193742-1791560368299.png",
+      "pdf": ""
+    }
+  ]
+}

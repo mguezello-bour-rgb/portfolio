@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administration - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- Ecran de connexion -->
+  <div id="login-screen" class="login-screen">
+    <form id="login-form" class="login-card">
+      <h1>Administration</h1>
+      <p class="login-hint">Entre le mot de passe administrateur pour modifier le portfolio.</p>
+      <input type="text" name="username" autocomplete="username" value="admin" hidden readonly />
+      <input type="password" id="login-password" name="password" placeholder="Mot de passe" autocomplete="current-password" required />
+      <button type="submit">Se connecter</button>
+      <p id="login-error" class="login-error"></p>
+      <a href="/" class="back-link">← Retour au site</a>
+    </form>
+  </div>
+
+  <!-- Espace admin -->
+  <div id="admin-app" class="admin-app" hidden>
+    <header class="header">
+      <div class="header-content">
+        <h1 class="logo">Administration du portfolio</h1>
+        <div class="admin-actions">
+          <a href="/" class="admin-link">Voir le site</a>
+          <button id="logout-btn" class="admin-link admin-logout">Déconnexion</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav admin-tabs container">
+      <button class="nav-btn active" data-cat="reseaux">Réseaux</button>
+      <button class="nav-btn" data-cat="telecoms">Télécoms</button>
+      <button class="nav-btn" data-cat="dev">Développement</button>
+      <button class="nav-btn" data-cat="projets">Projets</button>
+      <button class="nav-btn" data-cat="perso">Projets Perso</button>
+      <button class="nav-btn" data-cat="experiences">Expériences</button>
+      <button class="nav-btn" data-cat="cv">CV</button>
+    </nav>
+
+    <main class="container admin-main">
+      <div class="admin-toolbar">
+        <span class="admin-count" id="admin-count"></span>
+        <button id="add-btn" class="pdf-btn">+ Ajouter un élément</button>
+      </div>
+      <div id="admin-grid" class="projects-grid admin-grid"></div>
+    </main>
+  </div>
+
+  <!-- Formulaire d'ajout / modification -->
+  <div class="modal" id="edit-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="edit-close">&times;</button>
+      <h2 id="edit-title">Ajouter un élément</h2>
+
+      <form id="edit-form" class="edit-form">
+        <!-- Champs des projets et compétences -->
+        <fieldset id="std-fields" class="field-group">
+          <label>Titre
+            <input type="text" name="titre" required />
+          </label>
+
+          <label>Description courte
+            <textarea name="description" rows="2" required></textarea>
+          </label>
+
+          <label>Technologies (séparées par des virgules)
+            <input type="text" name="technologies" placeholder="Python, Docker, Ansible" />
+          </label>
+
+          <label>Détails (un point par ligne)
+            <textarea name="details" rows="4" placeholder="Un détail par ligne"></textarea>
+          </label>
+
+          <label>Résultat / statut
+            <input type="text" name="resultat" placeholder="acquis à 80%" />
+            <span class="hint">Écris un pourcentage (ex. « acquis à 80% ») pour afficher la barre de progression sur le site.</span>
+          </label>
+        </fieldset>
+
+        <!-- Champs des expériences (alternance, stage…) -->
+        <fieldset id="xp-fields" class="field-group" disabled hidden>
+          <div class="field-row">
+            <label>Type
+              <select name="type">
+                <option>Alternance</option>
+                <option>Stage</option>
+                <option>Emploi</option>
+                <option>Job étudiant</option>
+              </select>
+            </label>
+            <label>Statut
+              <select name="statut">
+                <option>En cours</option>
+                <option>Terminé</option>
+                <option>À venir</option>
+              </select>
+            </label>
+          </div>
+
+          <label>Entreprise
+            <input type="text" name="entreprise" placeholder="Orange" required />
+          </label>
+
+          <label>Poste / intitulé
+            <input type="text" name="poste" placeholder="Technicien réseaux en alternance" />
+          </label>
+
+          <div class="field-row">
+            <label>Dates
+              <input type="text" name="dates" placeholder="Sept. 2025 – août 2027" />
+            </label>
+            <label>Lieu
+              <input type="text" name="lieu" placeholder="Saint-Denis, La Réunion" />
+            </label>
+          </div>
+
+          <label>Missions (une par ligne)
+            <textarea name="missions" rows="5" placeholder="Une mission par ligne"></textarea>
+          </label>
+
+          <label>Outils / technologies (séparés par des virgules)
+            <input type="text" name="outils" placeholder="Fibre optique, Cisco, Wireshark" />
+          </label>
+          <span class="hint">Statut « En cours » : l’entreprise s’affiche aussi en haut du site (« Actuellement alternant chez … »).</span>
+        </fieldset>
+
+        <label><span id="image-label">Photo (jpg, png, webp, gif)</span>
+          <input type="file" name="imageFile" accept="image/*" />
+          <span class="current-file" id="current-image"></span>
+        </label>
+        <label class="check" id="remove-image-wrap" hidden>
+          <input type="checkbox" name="removeImage" /> Retirer la photo actuelle
+        </label>
+
+        <label><span id="pdf-label">Fichier PDF</span>
+          <input type="file" name="pdfFile" accept="application/pdf" />
+          <span class="current-file" id="current-pdf"></span>
+        </label>
+        <label class="check" id="remove-pdf-wrap" hidden>
+          <input type="checkbox" name="removePdf" /> Retirer le PDF actuel
+        </label>
+
+        <div class="edit-form-actions">
+          <button type="submit" class="pdf-btn">Enregistrer</button>
+          <button type="button" id="delete-btn" class="delete-btn" hidden>Supprimer</button>
+        </div>
+        <p id="edit-error" class="login-error"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

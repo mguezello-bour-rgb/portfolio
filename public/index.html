@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateo GUEZELLO-BOUR — Réseaux & Télécoms</title>
+  <meta name="description" content="Portfolio de Mateo GUEZELLO-BOUR, BUT Réseaux & Télécoms : projets, compétences, CV." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <a href="#accueil" class="brand">
+        <span class="brand-mark">MGB</span>
+        <span class="brand-name">Mateo GUEZELLO-BOUR</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#profil" class="nav-link">Profil</a>
+        <a href="#experiences" class="nav-link">Expériences</a>
+        <a href="#projets" class="nav-link">Projets</a>
+        <a href="#competences" class="nav-link">Compétences</a>
+        <a href="#perso" class="nav-link">Personnel</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ EN-TÊTE ============ -->
+    <section id="accueil" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="kicker mono">Portfolio </p>
+          <h1 class="hero-name">Mateo<br />GUEZELLO-BOUR</h1>
+          <a href="#experiences" class="status-badge" id="status-badge" hidden><span class="status-dot"></span><span id="status-text"></span></a>
+          <p class="hero-lead">
+            Étudiant en 3<sup>e</sup> année de BUT Réseaux &amp; Télécoms, en alternance chez Orange.
+            J’installe, configure et teste des infrastructures réseau et télécom :
+            câblage cuivre et fibre optique, Wi-Fi, transmission, routage et supervision.
+          </p>
+          <div class="hero-actions">
+            <a href="#projets" class="btn btn-solid">Consulter les projets</a>
+            <a href="#" class="btn btn-line" id="hero-cv" target="_blank" rel="noopener" hidden>Télécharger le CV (PDF)</a>
+          </div>
+        </div>
+
+        <!-- Fiche synthétique -->
+        <aside class="sheet reveal" aria-label="Fiche synthétique">
+          <header class="sheet-head mono">
+            <span>Fiche synthétique</span>
+            <span id="sheet-date"></span>
+          </header>
+          <dl class="sheet-rows">
+            <div><dt>Formation</dt><dd>BUT Réseaux &amp; Télécoms — IUT<br /><span class="muted">2023 – 2027</span></dd></div>
+            <div id="sheet-situation-row" hidden><dt>Situation</dt><dd id="sheet-situation"></dd></div>
+            <div><dt>Spécialité</dt><dd>Réseaux &amp; télécommunications</dd></div>
+            <div><dt>Domaines</dt><dd>Fibre optique · Wi-Fi · Transmission · Câblage · Routage</dd></div>
+            <div><dt>Projets documentés</dt><dd id="sheet-projects">—</dd></div>
+            <div><dt>Rapports disponibles</dt><dd id="sheet-reports">—</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="container">
+        <div class="figures reveal">
+          <div class="figure"><strong data-count="0" id="stat-projets">0</strong><span>Projets réalisés</span></div>
+          <div class="figure"><strong data-count="0" id="stat-comp">0</strong><span>Compétences techniques</span></div>
+          <div class="figure"><strong data-count="0" id="stat-tech">0</strong><span>Outils et technologies</span></div>
+          <div class="figure"><strong data-count="0" data-suffix=" %" id="stat-acquis">0</strong><span>Acquis moyen (projets BUT)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROFIL ============ -->
+    <section id="profil" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">01</p>
+          <h2>Profil</h2>
+        </header>
+
+        <div class="profile-grid">
+          <div class="block reveal">
+            <h3 class="block-title mono">Présentation</h3>
+            <p class="lead">
+              Étudiant en BUT Réseaux &amp; Télécoms, je m’intéresse à l’architecture réseau,
+              à la transmission et à la supervision. Je travaille sur du matériel réel,
+              en binôme ou en équipe, et je documente chaque intervention :
+              procédure, mesures, résultats.
+            </p>
+          </div>
+
+          <div class="block reveal">
+            <h3 class="block-title mono">Formation</h3>
+            <ul class="timeline">
+              <li>
+                <span class="tl-date mono">2023 – 2027</span>
+                <strong>BUT Réseaux &amp; Télécoms</strong>
+                <span class="muted">IUT</span>
+              </li>
+            </ul>
+            <h3 class="block-title mono" style="margin-top:2rem">Certifications</h3>
+            <p class="muted">En préparation (CCNA).</p>
+          </div>
+
+          <div class="block block-wide reveal">
+            <h3 class="block-title mono">Répartition du travail présenté</h3>
+            <div class="domain-bars" id="domain-bars"></div>
+          </div>
+
+          <div class="block block-wide block-cv reveal" id="cv-card" hidden>
+            <div>
+              <h3 class="block-title mono">Curriculum vitae</h3>
+              <p class="muted">Version PDF à jour.</p>
+            </div>
+            <a href="#" class="btn btn-solid" id="cv-link" target="_blank" rel="noopener">Ouvrir le CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPÉRIENCES ============ -->
+    <!-- Le contenu se modifie depuis /admin, onglet « Expériences » -->
+    <section id="experiences" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">02</p>
+          <h2>Expériences professionnelles</h2>
+          <p class="section-sub">Alternance et stage en entreprise.</p>
+        </header>
+
+        <div class="xp-grid" id="xp-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETS ============ -->
+    <section id="projets" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">03</p>
+          <h2>Projets <span class="count mono" id="projets-count"></span></h2>
+          <p class="section-sub">Projets réalisés en BUT sur matériel réel. Chaque fiche détaille la démarche, les outils utilisés et le niveau d’acquisition.</p>
+        </header>
+        <div class="cards" id="projets-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ COMPÉTENCES ============ -->
+    <section id="competences" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">04</p>
+          <h2>Compétences techniques</h2>
+          <p class="section-sub">Classées par domaine. Cliquer sur une compétence pour afficher le détail.</p>
+        </header>
+        <div class="skill-columns" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETS PERSONNELS ============ -->
+    <section id="perso" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-num mono">05</p>
+          <h2>Projets personnels <span class="count mono" id="perso-count"></span></h2>
+          <p class="section-sub">Travaux menés en dehors de la formation.</p>
+        </header>
+        <div class="cards" id="perso-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact reveal">
+          <div>
+            <p class="section-num mono">06</p>
+            <h2>Contact</h2>
+            <p class="section-sub">Disponible pour un échange. Réponse rapide par e-mail ou LinkedIn.</p>
+          </div>
+          <!-- Remplace ces liens par les tiens -->
+          <ul class="contact-list">
+            <li><span class="mono muted">E-mail</span><a href="mailto:mateo.guezellobour@gmail.com">mateo.guezellobour@gmail.com</a></li>
+            <li><span class="mono muted">LinkedIn</span><a href="https://www.linkedin.com/in/matéo-guezello-bour-6bb74b387" target="_blank" rel="noopener">www.linkedin.com/in/matéo-guezello-bour-6bb74b387</a></li>
+            <li><span class="mono muted">GitHub</span><a href="https://github.com" target="_blank" rel="noopener">github.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Mateo GUEZELLO-BOUR</span>
+      <a href="#accueil">Haut de page ↑</a>
+    </div>
+  </footer>
+
+  <!-- Fenêtre de détail -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="Fermer">✕</button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
