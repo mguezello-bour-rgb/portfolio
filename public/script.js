@@ -5,6 +5,8 @@
 // =========================================================
 
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const PHONE_QUERY = window.matchMedia('(max-width: 760px)');
+const IS_PHONE = PHONE_QUERY.matches;
 
 const CATEGORIES = {
   projets: { label: 'Projet BUT', code: 'PRJ' },
@@ -152,11 +154,12 @@ function renderSkills(data) {
   document.getElementById('skills-grid').innerHTML = ['reseaux', 'telecoms', 'dev'].map(cat => {
     const items = data[cat] || [];
     return `
-      <div class="skill-col reveal">
-        <header>
+      <div class="skill-col reveal${IS_PHONE ? ' collapsed' : ''}">
+        <header aria-expanded="${!IS_PHONE}">
           <h3>${CATEGORIES[cat].label}</h3>
           <span>${String(items.length).padStart(2, '0')}</span>
           <p>${DOMAIN_INTRO[cat]}</p>
+          <button type="button" class="skill-toggle">Voir les ${items.length} compétence${items.length > 1 ? 's' : ''}</button>
         </header>
         ${items.map((item, i) => {
           const id = register(item, cat, i);
@@ -380,6 +383,17 @@ function closeModal() {
 
 document.addEventListener('click', e => {
   if (e.target.closest('[data-close]')) return closeModal();
+
+  // Téléphone : ouvrir / replier un domaine de compétences
+  const colHeader = e.target.closest('.skill-col > header');
+  if (colHeader && PHONE_QUERY.matches) {
+    const col = colHeader.parentElement;
+    const open = col.classList.toggle('collapsed') === false;
+    colHeader.setAttribute('aria-expanded', open);
+    const n = col.querySelectorAll('.skill').length;
+    col.querySelector('.skill-toggle').textContent = open ? 'Masquer' : `Voir les ${n} compétence${n > 1 ? 's' : ''}`;
+    return;
+  }
   const el = e.target.closest('[data-id]');
   if (el) openModal(Number(el.dataset.id));
 });
